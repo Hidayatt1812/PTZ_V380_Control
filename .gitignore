@@ -1,0 +1,21 @@
+# Konfigurasi lokal — berisi IP dan password asli
+config.py
+
+# IDE / editor settings
+.claude/
+
+# Data kalibrasi lokal
+ptz_presets.json
+
+# Virtual environment
+V380.venv/
+.venv/
+venv/
+
+# Screenshot hasil capture
+opencv_frame_*.png
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
