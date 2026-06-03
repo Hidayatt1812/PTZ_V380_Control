@@ -1,0 +1,27 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>{AUTH_HEADER}</s:Header>
+  <s:Body>
+    <ModifyPresetTour xmlns="http://www.onvif.org/ver20/ptz/wsdl">
+      <ProfileToken>{PROFILE_TOKEN}</ProfileToken>
+      <PresetTour xmlns:tt="http://www.onvif.org/ver10/schema">
+        <token>{TOUR_TOKEN}</token>
+        <Name>{TOUR_NAME}</Name>
+        <StartingCondition>
+          <tt:RecurringTime>0</tt:RecurringTime>
+          <tt:RecurringDuration>PT0S</tt:RecurringDuration>
+          <tt:Direction>Forward</tt:Direction>
+        </StartingCondition>
+        <TourSpot>
+          <PresetDetail>
+            <PresetToken>{PRESET_TOKEN}</PresetToken>
+          </PresetDetail>
+          <Speed>
+            <tt:PanTilt x="0.5" y="0.5"/>
+            <tt:Zoom x="0.5"/>
+          </Speed>
+          <StayTime>PT5S</StayTime>
+        </TourSpot>
+      </PresetTour>
+    </ModifyPresetTour>
+  </s:Body>
+</s:Envelope>

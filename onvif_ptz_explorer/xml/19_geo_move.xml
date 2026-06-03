@@ -1,0 +1,13 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>{AUTH_HEADER}</s:Header>
+  <s:Body>
+    <GeoMove xmlns="http://www.onvif.org/ver20/ptz/wsdl">
+      <ProfileToken>{PROFILE_TOKEN}</ProfileToken>
+      <Target xmlns:tt="http://www.onvif.org/ver10/schema">
+        <tt:Lat>{LAT}</tt:Lat>
+        <tt:Lon>{LON}</tt:Lon>
+        <tt:Elevation>{ELEVATION}</tt:Elevation>
+      </Target>
+    </GeoMove>
+  </s:Body>
+</s:Envelope>

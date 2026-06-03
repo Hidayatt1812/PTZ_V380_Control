@@ -1,0 +1,37 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>{AUTH_HEADER}</s:Header>
+  <s:Body>
+    <SetConfiguration xmlns="http://www.onvif.org/ver20/ptz/wsdl">
+      <PTZConfiguration token="{CONFIG_TOKEN}">
+        <Name>PTZConfig</Name>
+        <UseCount>1</UseCount>
+        <NodeToken>PTZNode_1</NodeToken>
+        <DefaultAbsolutePantTiltPositionSpace>http://www.onvif.org/ver10/tptz/PanTiltSpaces/PositionGenericSpace</DefaultAbsolutePantTiltPositionSpace>
+        <DefaultAbsoluteZoomPositionSpace>http://www.onvif.org/ver10/tptz/ZoomSpaces/PositionGenericSpace</DefaultAbsoluteZoomPositionSpace>
+        <DefaultRelativePanTiltTranslationSpace>http://www.onvif.org/ver10/tptz/PanTiltSpaces/TranslationGenericSpace</DefaultRelativePanTiltTranslationSpace>
+        <DefaultRelativeZoomTranslationSpace>http://www.onvif.org/ver10/tptz/ZoomSpaces/TranslationGenericSpace</DefaultRelativeZoomTranslationSpace>
+        <DefaultContinuousPanTiltVelocitySpace>http://www.onvif.org/ver10/tptz/PanTiltSpaces/VelocityGenericSpace</DefaultContinuousPanTiltVelocitySpace>
+        <DefaultContinuousZoomVelocitySpace>http://www.onvif.org/ver10/tptz/ZoomSpaces/VelocityGenericSpace</DefaultContinuousZoomVelocitySpace>
+        <DefaultPTZSpeed xmlns:tt="http://www.onvif.org/ver10/schema">
+          <tt:PanTilt x="{MAX_SPEED}" y="{MAX_SPEED}" space="http://www.onvif.org/ver10/tptz/PanTiltSpaces/GenericSpeedSpace"/>
+          <tt:Zoom x="{MAX_SPEED}" space="http://www.onvif.org/ver10/tptz/ZoomSpaces/ZoomGenericSpeedSpace"/>
+        </DefaultPTZSpeed>
+        <DefaultPTZTimeout>PT1S</DefaultPTZTimeout>
+        <PanTiltLimits xmlns:tt="http://www.onvif.org/ver10/schema">
+          <tt:Range>
+            <tt:URI>http://www.onvif.org/ver10/tptz/PanTiltSpaces/PositionGenericSpace</tt:URI>
+            <tt:XRange><tt:Min>-1</tt:Min><tt:Max>1</tt:Max></tt:XRange>
+            <tt:YRange><tt:Min>-1</tt:Min><tt:Max>1</tt:Max></tt:YRange>
+          </tt:Range>
+        </PanTiltLimits>
+        <ZoomLimits xmlns:tt="http://www.onvif.org/ver10/schema">
+          <tt:Range>
+            <tt:URI>http://www.onvif.org/ver10/tptz/ZoomSpaces/PositionGenericSpace</tt:URI>
+            <tt:XRange><tt:Min>0</tt:Min><tt:Max>1</tt:Max></tt:XRange>
+          </tt:Range>
+        </ZoomLimits>
+      </PTZConfiguration>
+      <ForcePersistence>true</ForcePersistence>
+    </SetConfiguration>
+  </s:Body>
+</s:Envelope>

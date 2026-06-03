@@ -1,0 +1,9 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>{AUTH_HEADER}</s:Header>
+  <s:Body>
+    <RemovePresetTour xmlns="http://www.onvif.org/ver20/ptz/wsdl">
+      <ProfileToken>{PROFILE_TOKEN}</ProfileToken>
+      <PresetTourToken>{TOUR_TOKEN}</PresetTourToken>
+    </RemovePresetTour>
+  </s:Body>
+</s:Envelope>

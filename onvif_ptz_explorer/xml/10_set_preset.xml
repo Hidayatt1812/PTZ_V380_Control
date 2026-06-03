@@ -1,0 +1,9 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>{AUTH_HEADER}</s:Header>
+  <s:Body>
+    <SetPreset xmlns="http://www.onvif.org/ver20/ptz/wsdl">
+      <ProfileToken>{PROFILE_TOKEN}</ProfileToken>
+      <PresetName>{PRESET_NAME}</PresetName>
+    </SetPreset>
+  </s:Body>
+</s:Envelope>

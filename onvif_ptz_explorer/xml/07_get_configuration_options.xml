@@ -1,0 +1,8 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>{AUTH_HEADER}</s:Header>
+  <s:Body>
+    <GetConfigurationOptions xmlns="http://www.onvif.org/ver20/ptz/wsdl">
+      <ConfigurationToken>{CONFIG_TOKEN}</ConfigurationToken>
+    </GetConfigurationOptions>
+  </s:Body>
+</s:Envelope>

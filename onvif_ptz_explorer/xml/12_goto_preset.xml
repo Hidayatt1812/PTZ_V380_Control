@@ -1,0 +1,13 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>{AUTH_HEADER}</s:Header>
+  <s:Body>
+    <GotoPreset xmlns="http://www.onvif.org/ver20/ptz/wsdl">
+      <ProfileToken>{PROFILE_TOKEN}</ProfileToken>
+      <PresetToken>{PRESET_TOKEN}</PresetToken>
+      <Speed>
+        <PanTilt x="{SPEED}" y="{SPEED}" xmlns="http://www.onvif.org/ver10/schema"/>
+        <Zoom x="{SPEED}" xmlns="http://www.onvif.org/ver10/schema"/>
+      </Speed>
+    </GotoPreset>
+  </s:Body>
+</s:Envelope>

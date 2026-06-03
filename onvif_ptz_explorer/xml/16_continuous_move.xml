@@ -1,0 +1,12 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Header>{AUTH_HEADER}</s:Header>
+  <s:Body>
+    <ContinuousMove xmlns="http://www.onvif.org/ver20/ptz/wsdl">
+      <ProfileToken>{PROFILE_TOKEN}</ProfileToken>
+      <Velocity>
+        <PanTilt x="{PAN}" y="{TILT}" xmlns="http://www.onvif.org/ver10/schema"/>
+        <Zoom x="{ZOOM}" xmlns="http://www.onvif.org/ver10/schema"/>
+      </Velocity>
+    </ContinuousMove>
+  </s:Body>
+</s:Envelope>
